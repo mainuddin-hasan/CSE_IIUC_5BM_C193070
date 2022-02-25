@@ -1,17 +1,13 @@
 <html>
 <head>
     <title>5BM Mainuddin_C193070</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <style>
     .button-class {
         font-size: 30px;
-    }
-
-    .table-class {
-        width: 100%;
-        margin-top: 200px;
-        background-color: rgb(14, 230, 245);
-
+        border-radius: 12px;
     }
 
     #content {
@@ -21,8 +17,6 @@
         margin-right: auto;
         width: 600px;
         height: 100px;
- 
-
 
     }
 </style>
@@ -30,14 +24,14 @@
 
 <p style ="text-align-last: center; font-size: 50px; color: aliceblue;">Welcome To Student Panel</p>
 
-<img style="width: 200px;height: 200px;margin-left: auto; margin-right: auto;display: block;margin-top: 200px;" src="images/login2.jpg">
+<img style="width: 200px;height: 200px;margin-left: auto; margin-right: auto;display: block;margin-top: 200px;border-radius: 50%;" src="images/login2.jpg">
 
 <div id="content">
-    <label style="font-size: 25;">User name :
+    <label style="font-size: 25; color: rgb(238, 233, 226);">User name :
     <input placeholder="Enter student name" type="text" name="studentName" style="height: 30px; width: 250px;"><br> </label>
-    <label style="font-size: 25;">User ID   :
+    <label style="font-size: 25; color: antiquewhite;">User ID :
     <input placeholder="Enter Student ID" type="text" name="studentId" style="height: 30px; width: 250px;"><br> </label>
-    <label style="font-size: 25;">Gender :
+    <label style="font-size: 25; color: antiquewhite;">Gender :
     <select name="Gender">
         <option disabled selected value="">Select gender</option>
         <option>male</option>
@@ -46,7 +40,50 @@
     <button class="button-class" name="formSubmit" value="Submit">Submit</button>
 </div>
 
-<table class="table-class" cellspacing="50" border="1" style="border-collapse: collapse">
+
+<div class="container-fluid" >
+    <div class="row">
+        <div  class="col-md-4" style="margin-left: auto;margin-right: auto; margin-top: 200px;">
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <h3>Sign Up</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover table-striped">
+                        <tr>
+                            <td>Username</td>
+                            <td>
+                                <input class="form-control" type="text" name="studentName" id="studentName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>
+                                <input class="form-control" type="password" name="password" id="fatherName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Student ID</td>
+                            <td>
+                                <input class="form-control" type="text" name="studentId" id="studentId">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input  class="btn btn-success " value="Submit" type="submit">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<table class="table table-bordered table-hover table-striped" cellspacing="50" border="1" style="border-collapse: collapse;margin-top: 80px;background-color: rgb(14, 230, 245);border: 3px solid black;width: 100%;">
     <tr>
         <td style="text-align: center">Name</td>
         <td style="text-align: center">University Name</td>
@@ -91,10 +128,15 @@
     </tr>
 
 </table>
-<h1>About</h1>
-<p style="color: crimson;" >A student panel interview is there to compliment the interview process and gives your employer a chance to see what you are like with the students, similar to a mock lesson interview. The students will also give feedback to the headteacher on how they think you performed.<a style="color: yellow;" href="http://student.ciu.edu.bd/">read more</a></p>
+<h1 style="color: antiquewhite;">About</h1>
+<p style="color: crimson;" >A student panel interview is there to compliment the interview process and gives your employer a chance to see what you are like with the students, similar to a mock lesson interview. The students will also give feedback to the headteacher on how they think you performed.<a style="color: yellow;" href="https://blog.realiseme.com/blog/student-panel-interviews/#:~:text=A%20student%20panel%20interview%20is,how%20they%20think%20you%20performed.">read more</a></p>
+
+
 
 
 </body>
 
+
+
 </html>
+
