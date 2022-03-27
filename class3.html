@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+    <script>
+        function onclick_sumfun()
+        {
+            var first_number = document.getElementById("first_number").value;
+            var second_number = document.getElementById("second_number").value;
+            var add = Number(first_number) + Number(second_number) ;
+            document.getElementById('sum').value = add;
+        }
+
+        function onchange_sumfun( first_number1 = 0 , second_number1 = 0)
+        {
+            var add1 = Number(first_number1) + Number(second_number1)
+            document.getElementById('sum1').value = add1;
+        }
+
+        function onkeyup_sumfun(first_number2 = 0,second_number2 = 0)
+        {
+            var first_number2 = document.getElementById("first_number2").value;
+            var second_number2 = document.getElementById("second_number2").value;
+            var add2 = Number(first_number2) + Number(second_number2)
+            document.getElementById('sum2').value = add2;
+        }
+    </script>
+<body>
+   
+
+    <table>
+        <tr>
+            <td>Enter First Number</td>
+            <td><input type="number" id="first_number" name="first_number"></td>
+        </tr>
+        <tr>
+            <td>Enter Second Number</td>
+            <td><input type="number" id="second_number" name="second_number"></td>
+        </tr>
+        <tr>
+            <td>Sum of Both Number</td>
+            <td><input type="number" id="sum" name="sum"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align ="center"><input type ="submit" name="" id="btn" onclick="onclick_sumfun()"></td>
+        </tr>
+    </table>
+
+    <br> <br> <br>
+
+   <table>
+        <tr>
+            <td>Enter First Number</td>
+            <td><input type="number" id="first_number1" name="first_number1" onchange="onchange_sumfun(this.value,getElementById('second_number1').value)" ></td>
+        </tr>
+        <tr>
+            <td>Enter Second Number</td>
+            <td><input type="number" id="second_number1" name="second_number1" onchange="onchange_sumfun(getElementById('first_number1').value,this.value)"></td>
+        </tr>
+        <tr>
+            <td>Sum of Both Number</td>
+            <td><input type="number" id="sum1" name="sum1"></td>
+        </tr>
+    </table>
+
+    <br> <br> <br>
+    
+   <table>
+        <tr>
+            <td>Enter First Number</td>
+            <td><input type="number" id="first_number2" name="first_number2" onkeyup="onkeyup_sumfun(getElementById('second_number2'),this.value)" ></td>
+        </tr>
+        <tr>
+            <td>Enter Second Number</td>
+            <td><input type="number" id="second_number2" name="second_number2" onkeyup="onkeyup_sumfun(getElementById('first_number2'),this.value)"></td>
+        </tr>
+        <tr>
+            <td>Sum of Both Number</td>
+            <td><input type="number" id="sum2" name="sum2"></td>
+        </tr>
+    </table>
+</body>
+</html>
