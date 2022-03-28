@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+ 
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- below we are including the jQuery and jQuery plugin .js files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+ 
+    <script>
+        $().ready(function () {
+            $("#frm").validate({
+                rules:{
+                    Name: "required",
+                    email:"required",
+                },messages:{
+                    Name: "Please Enter Name ",
+                    email: "Please Enter email ",
+                }
+            });
+        });
+    </script>
+ 
+</head>
+ 
+<body>
+    <div class="form-validation col-md-6" style="margin-left:15rem">
+        <form id="frm">
+            <div class="row mb-3">
+                <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter Name">
+            </div>
+            <div class="row mb-3">
+                <input type="email" class="form-control" id="Email" name="email" placeholder="Enter Email">
+            </div>
+            <div class="row mb-3">
+                <input type="text" class="form-control" id="datepicker" name="datepicker" placeholder="Enter Birth Date">
+            </div>
+            <div class="row mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+            </div>
+            <div class="row mb-3">
+                <button class="btn-success">submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+ 
+</html>
